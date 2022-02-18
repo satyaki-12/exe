@@ -1,0 +1,117 @@
+
+@import "https://fonts.googleapis.com/css?family=Josefin+Sans:400,700";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: rgb(87, 123, 133);
+}
+body a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: 2s;
+}
+.card:hover .card-front {
+  transform: rotateX(0deg);
+
+}
+.card:hover .card-back {
+  transform: rotateX(-180deg);
+}
+
+
+.card-back {
+  height: 100%;
+  width: 100%;
+  background-image: url("https://i.ibb.co/VxSDLHN/display.jpg");
+  
+  background-position: 50% 50%;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  backface-visibility: hidden;
+   transform: rotateX(0deg);
+  transition: 0.5s;
+}
+
+.card-front {
+    border: solid 10px #ad80e0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  backface-visibility: hidden;
+  transform: rotateX(180deg);
+
+  transition: 0.5s;
+  color: #ffffff;
+  text-align: center;
+}
+.card-front h2 {
+  margin: 60% auto 35% auto;
+  font-size: 30px;
+}
+.card-front h2 span {
+    color: #fb277b;
+  font-size: 20px;
+}
+.card-front a {
+  height: 10px;
+  width: 20px;
+  padding: 10px 8px;
+  border-radius: 4px;
+  line-height: 10px;
+}
+/* .card-front a i{
+  height: 10px;
+  width: 20px;
+  /* padding: 10px 5px; */
+  /* border-radius: 4px; */
+  /* line-height: 20px; */
+ 
+
+.card-front a:hover {
+  color: #000000;
+  background-color: #fff;
+}
+@media screen and (max-width:500px) {
+    .card{
+        height: 370px;
+        width: 260px;
+        position: absolute;
+        left: 42%;
+    }
+
+}
+@media screen and (max-width:340px) {
+    .card{
+        height: 350px;
+        width: 240px;
+        position: absolute;
+        left: 42%;
+    }
+
+}
+@media screen and (max-width:400px) {
+    .card{
+    
+        position: absolute;
+        left: 49%;
+    }
+
+}
